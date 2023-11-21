@@ -5,9 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class PapasPizzeriaMain extends Application {
+
+    public void newWindow() throws IOException{
+
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader =

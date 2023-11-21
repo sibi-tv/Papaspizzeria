@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pizzapizza.PapasPizzeriaController">
@@ -37,34 +36,42 @@
             </children>
         </GridPane>
     </top>
-    <bottom>
-        <GridPane prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <Button alignment="BASELINE_CENTER" cache="true" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="91.0" prefWidth="200.0" style="-fx-background-color: #fc0303;" text="Pick a Pizza!" textFill="WHITE">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="69.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="114.0" minWidth="10.0" prefWidth="31.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="206.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="73.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="142.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+                <Button alignment="BASELINE_CENTER" cache="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#specialties" prefHeight="166.0" prefWidth="265.0" style="-fx-background-color: #fc0303;" text="Specialities" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
-                        <Font size="24.0" />
+                        <Font name="Berlin Sans FB Demi Bold" size="28.0" />
                     </font>
                 </Button>
-                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="189.0" prefWidth="200.0" style="-fx-background-color: #f5d41d;" text="Pizza Builder" textFill="WHITE" GridPane.columnIndex="1">
+                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buildpizza" prefHeight="141.0" prefWidth="242.0" style="-fx-background-color: #f5d41d;" text="Pizza Builder" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <font>
-                        <Font size="24.0" />
+                        <Font name="Berlin Sans FB Demi Bold" size="27.0" />
                     </font></Button>
-                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="202.0" prefWidth="200.0" style="-fx-background-color: green;" text="Order Summary" textFill="WHITE" GridPane.columnIndex="2">
+                <Button alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#currentorder" prefHeight="156.0" prefWidth="210.0" style="-fx-background-color: green;" text="Current Order" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                     <font>
-                        <Font size="24.0" />
+                        <Font name="Berlin Sans FB Demi Bold" size="27.0" />
                     </font></Button>
-            </children>
-        </GridPane>
-    </bottom>
-    <left>
-        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
-    </left>
+            <Button mnemonicParsing="false" onAction="#storeorders" prefHeight="142.0" prefWidth="221.0" style="-fx-background-color: blue;" text="Store Orders" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </center>
 </BorderPane>
