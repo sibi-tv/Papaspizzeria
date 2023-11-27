@@ -76,6 +76,21 @@
                   <Image url="@ladle.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="136.0" onMouseClicked="#specialties" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@specialty.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="139.0" fitWidth="96.0" onMouseClicked="#currentorder" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@order.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="139.0" fitWidth="128.0" onMouseClicked="#storeorders" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@ordersummary.png" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </center>

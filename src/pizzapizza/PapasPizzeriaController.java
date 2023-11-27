@@ -19,39 +19,43 @@ public class PapasPizzeriaController {
 
     @FXML
     void specialties() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpecialtyView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/SpecialtyView.fxml"));
         Parent root1 = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Specialty Pizza Selection");
         stage.setScene(new Scene(root1));
+        stage.setResizable(false);
         stage.show();
     }
     @FXML
     void buildpizza() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BuildPizzaView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/BuildPizzaView.fxml"));
         Parent root1 = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Build Your Own Pizza!");
         stage.setScene(new Scene(root1));
+        stage.setResizable(false);
         stage.show();
     }
     @FXML
     void currentorder() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CurrentOrderView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/CurrentOrderView.fxml"));
         Parent root1 = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Current Order");
         stage.setScene(new Scene(root1));
+        stage.setResizable(false);
         stage.show();
     }
 
     @FXML
     void storeorders() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("StoreOrdersView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/StoreOrdersView.fxml"));
         Parent root1 = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Store Orders");
         stage.setScene(new Scene(root1));
+        stage.setResizable(false);
         stage.show();
     }
 }

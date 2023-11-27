@@ -17,7 +17,7 @@ public class PapasPizzeriaMain extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader =
-                new FXMLLoader(PapasPizzeriaMain.class.getResource("PapasPizzeriaView.fxml"));
+                new FXMLLoader(PapasPizzeriaMain.class.getResource("resources/PapasPizzeriaView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),750,750);
         primaryStage.setResizable(false);
         primaryStage.setHeight(650);
