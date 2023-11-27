@@ -27,6 +27,7 @@ public class CurrentOrderController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Integer ordNum = DataModel.getInstance().getOrder().getOrderNum();
         orderNum.setText(ordNum.toString());
+        for (Pizza p : DataModel.getInstance().getOrder().getPizzaList()) {lv.getItems().add(p.toString());}
         if(DataModel.getInstance().getOrder() == null || DataModel.getInstance().getOrder().getPizzaList().isEmpty()) {
             Integer i = Constants.none;
             subTotal.setText(i.toString());
@@ -49,10 +50,7 @@ public class CurrentOrderController implements Initializable {
 
     private Double[] prices() {
         Double zaPrice = (double)Constants.none;
-        for (Pizza p : DataModel.getInstance().getOrder().getPizzaList()) {
-            lv.getItems().add(p.toString());
-            zaPrice += p.price();
-        }
+        for (Pizza p : DataModel.getInstance().getOrder().getPizzaList()) {zaPrice += p.price();}
         DecimalFormat df = new DecimalFormat( "#.##");
         Double zaTax = Double.valueOf(df.format(DataModel.getInstance().getOrder().numPizzas() * Constants.tax));
         Double totalZaPrice = Double.valueOf(df.format((zaTax+zaPrice)));

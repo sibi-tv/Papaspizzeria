@@ -19,7 +19,7 @@ public abstract class Pizza {
 
     public ArrayList<Topping> getToppings() {return toppings;}
     public void addToppings(Topping t) {
-        if (getPizzaType().equalsIgnoreCase("Build Your Own")){
+        if (getPizzaType().equalsIgnoreCase("BuildYourOwn")){
             if (toppings.size() < Constants.maxToppings) {
                 toppings.add(t);
             }

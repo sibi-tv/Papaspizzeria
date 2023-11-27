@@ -95,6 +95,7 @@ public class BuildPizzaController implements Initializable {
         tomato.setSelected(Constants.select);
         alfredo.setSelected(!Constants.select);
         tf.setText(String.valueOf(Constants.byoSmallPrice));
+        add.setDisable(!Constants.disable);
         orderAdd.setDisable(Constants.disable);
     }
 }
