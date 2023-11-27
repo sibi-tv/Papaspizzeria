@@ -15,6 +15,8 @@ import java.io.IOException;
  * @author Sibi suriyanarayan Tiruchirapalli venketaramani, Rahulraj Rajesh
  */
 public class PapasPizzeriaController {
+    private Order order;
+
     @FXML
     void specialties() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SpecialtyView.fxml"));

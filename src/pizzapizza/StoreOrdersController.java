@@ -8,7 +8,8 @@ import javafx.scene.control.ComboBox;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class StoreOrdersController implements Initializable {
+public class  StoreOrdersController implements Initializable {
+
     @FXML
     ComboBox<String> combobox;
 
