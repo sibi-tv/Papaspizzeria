@@ -10,6 +10,13 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
+/**
+ * The `SpecialtyController` class is a controller for the specialty pizza selection
+ * in the Pizza Pizza application. It implements the Initializable interface
+ * to initialize the controller when the FXML file is loaded.
+ *
+ * @author Sibi suriyanarayan Tiruchirapalli venketaramani, Rahulraj Rajesh
+ */
 public class SpecialtyController implements Initializable {
     @FXML
     ComboBox<String> combobox;
@@ -32,6 +39,9 @@ public class SpecialtyController implements Initializable {
     @FXML
     Button addtoorder;
 
+    /**
+     * Hides all pizza images and displays the selected pizza image.
+     */
     private void makeVisible(){
         deluxe.setVisible(false);
         supreme.setVisible(false);
@@ -48,6 +58,11 @@ public class SpecialtyController implements Initializable {
         }
     }
 
+    /**
+     * Retrieves the selected pizza size from the radio buttons.
+     *
+     * @return A String representing the selected pizza size.
+     */
     private String getSize(){
         if(small.isSelected()){
             return "small";
@@ -57,6 +72,10 @@ public class SpecialtyController implements Initializable {
         return "large";
     }
 
+    /**
+     * Sets the total price based on the selected pizza and size,
+     * considering additional options such as extra cheese and extra sauce.
+     */
     @FXML
     private void setPrice(){
         if(addtoorder.isDisabled()) {
@@ -87,10 +106,13 @@ public class SpecialtyController implements Initializable {
         }
         if(size.equals("medium")) price += 2;
         else if(size.equals("large")) price += 4;
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.00");
         totalprice.setText("$" + df.format(price));
     }
 
+    /**
+     * Adjusts the total price when the extra cheese checkbox is toggled.
+     */
     @FXML
     private void check1(){
         double price;
@@ -99,10 +121,13 @@ public class SpecialtyController implements Initializable {
         }else{
             price = Double.parseDouble(totalprice.getText().substring(Constants.one)) - Constants.one;
         }
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.00");
         totalprice.setText("$" + df.format(price));
     }
 
+    /**
+     * Adjusts the total price when the extra sauce checkbox is toggled.
+     */
     @FXML
     private void check2(){
         double price;
@@ -111,10 +136,13 @@ public class SpecialtyController implements Initializable {
         }else{
             price = Double.parseDouble(totalprice.getText().substring(Constants.one)) - Constants.one;
         }
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.00");
         totalprice.setText("$" + df.format(price));
     }
 
+    /**
+     * Creates a pizza based on the selected options and adds it to the order.
+     */
     @FXML
     private void makeZa(){
         Pizza pizza = PizzaMaker.createPizza(combobox.getValue().toLowerCase());
@@ -130,6 +158,12 @@ public class SpecialtyController implements Initializable {
         DataModel.getInstance().getOrder().getPizzaList().add(pizza);
     }
 
+    /**
+     * Initializes the controller, setting up the initial state of the UI elements.
+     *
+     * @param url            The location used to resolve relative paths for the root object.
+     * @param resourceBundle The resources specific to this controller.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         combobox.setItems(FXCollections.observableArrayList("Deluxe", "Supreme", "Meatzza", "Seafood", "Pepperoni"));

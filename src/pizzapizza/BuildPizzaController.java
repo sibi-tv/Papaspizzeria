@@ -9,6 +9,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * Controller class for the "Build Pizza" view in the Pizza Pizza application.
+ * Handles user interactions and updates the view based on the selected options.
+ *
+ * @author Sibi suriyanarayan Tiruchirapalli venketaramani, Rahulraj Rajesh
+ */
+
 public class BuildPizzaController implements Initializable {
     @FXML
     ComboBox<String> sizecombobox;
@@ -31,7 +38,12 @@ public class BuildPizzaController implements Initializable {
     @FXML
     CheckBox ExtraCheese, ExtraSauce;
 
-
+    /**
+     * Initializes the controller, setting up the initial state of the UI elements.
+     *
+     * @param url            The location used to resolve relative paths for the root object.
+     * @param resourceBundle The resources specific to this controller.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<String> al = new ArrayList<>();
@@ -45,6 +57,9 @@ public class BuildPizzaController implements Initializable {
         tf.setText(String.valueOf(Constants.byoSmallPrice));
     }
 
+    /**
+     * Adds the selected topping to the list of toppings and updates the UI elements.
+     */
     @FXML
     void addTopping() {
         selectedTopping.getItems().add(toppingcombobox.getSelectionModel().getSelectedItem());
@@ -53,17 +68,29 @@ public class BuildPizzaController implements Initializable {
         TotalPrice();
     }
 
+    /**
+     * Removes the selected topping from the list of toppings and updates the UI elements.
+     */
     @FXML
     void removeTopping() {
-        selectedTopping.getItems().remove(selectedTopping.getSelectionModel().getSelectedIndex());
-        if (add.isDisabled()) {add.setDisable(!Constants.disable);}
-        else if(selectedTopping.getItems().size() < Constants.minToppings) {orderAdd.setDisable(Constants.disable);}
-        TotalPrice();
+        if(selectedTopping.getSelectionModel().getSelectedIndex() > -1){
+            selectedTopping.getItems().remove(selectedTopping.getSelectionModel().getSelectedIndex());
+            if (add.isDisabled()) {add.setDisable(!Constants.disable);}
+            else if(selectedTopping.getItems().size() < Constants.minToppings) {orderAdd.setDisable(Constants.disable);}
+            TotalPrice();
+        }
+
     }
 
+    /**
+     * Handles the click event and updates the total price accordingly.
+     */
     @FXML
     void clicked(){TotalPrice();}
 
+    /**
+     * Updates the total price based on the selected options.
+     */
     @FXML
     void TotalPrice() {
         Pizza p = makeZa();
@@ -71,6 +98,11 @@ public class BuildPizzaController implements Initializable {
         tf.setText(price.toString());
     }
 
+    /**
+     * Creates a Pizza object based on the selected UI elements.
+     *
+     * @return A Pizza object with the selected options.
+     */
     private Pizza makeZa() {
         Pizza p = PizzaMaker.createPizza("buildyourown");
         p.setSize(Size.valueOf(sizecombobox.getSelectionModel().getSelectedItem()));
@@ -84,6 +116,9 @@ public class BuildPizzaController implements Initializable {
         return p;
     }
 
+    /**
+     * Adds the created pizza to the order and resets UI components to their default state.
+     */
     @FXML
     public void addOrder() {
         DataModel.getInstance().getOrder().getPizzaList().add(makeZa());

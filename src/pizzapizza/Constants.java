@@ -1,5 +1,10 @@
 package pizzapizza;
 
+/**
+ * The Constants class holds constants that are used in all classes for ease.
+ *
+ * @author Sibi suriyanarayan Tiruchirapalli venketaramani, Rahulraj Rajesh
+ */
 
 public class Constants {
     final static double deluxeSmallPrice = 14.99;
