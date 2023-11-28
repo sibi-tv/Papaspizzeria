@@ -19,13 +19,13 @@ import java.util.ResourceBundle;
 public class CurrentOrderController implements Initializable {
 
     @FXML
-    ListView<String> lv;
+    private ListView<String> lv;
 
     @FXML
-    TextField orderNum, subTotal, salesTax, totalPrice;
+    private TextField orderNum, subTotal, salesTax, totalPrice;
 
     @FXML
-    Button rp, po;
+    private Button rp, po;
 
     /**
      * Initializes the controller, setting up the initial state of the UI elements.

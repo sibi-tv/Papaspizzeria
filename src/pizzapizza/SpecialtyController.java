@@ -19,25 +19,25 @@ import java.util.ResourceBundle;
  */
 public class SpecialtyController implements Initializable {
     @FXML
-    ComboBox<String> combobox;
+    private ComboBox<String> combobox;
 
     @FXML
-    TextField totalprice;
+    private TextField totalprice;
 
     @FXML
-    CheckBox extracheese, extrasauce;
+    private CheckBox extracheese, extrasauce;
 
     @FXML
-    ListView<String> toppingslist;
+    private ListView<String> toppingslist;
 
     @FXML
-    ImageView deluxe, supreme, meatzza, seafood, pepperoni;
+    private ImageView deluxe, supreme, meatzza, seafood, pepperoni;
 
     @FXML
-    RadioButton small, medium, large;
+    private RadioButton small, medium, large;
 
     @FXML
-    Button addtoorder;
+    private Button addtoorder;
 
     /**
      * Hides all pizza images and displays the selected pizza image.

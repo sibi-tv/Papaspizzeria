@@ -18,25 +18,25 @@ import java.util.ResourceBundle;
 
 public class BuildPizzaController implements Initializable {
     @FXML
-    ComboBox<String> sizecombobox;
+    private ComboBox<String> sizecombobox;
 
     @FXML
-    ComboBox<String> toppingcombobox;
+    private ComboBox<String> toppingcombobox;
 
     @FXML
-    ListView<String> selectedTopping;
+    private ListView<String> selectedTopping;
 
     @FXML
-    TextField tf;
+    private TextField tf;
 
     @FXML
-    Button add, orderAdd;
+    private Button add, orderAdd;
 
     @FXML
-    RadioButton tomato, alfredo;
+    private RadioButton tomato, alfredo;
 
     @FXML
-    CheckBox ExtraCheese, ExtraSauce;
+    private CheckBox ExtraCheese, ExtraSauce;
 
     /**
      * Initializes the controller, setting up the initial state of the UI elements.

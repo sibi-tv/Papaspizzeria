@@ -22,16 +22,16 @@ import java.util.ResourceBundle;
 public class StoreOrdersController implements Initializable {
 
     @FXML
-    ListView<String> listview;
+    private ListView<String> listview;
 
     @FXML
-    ComboBox<String> combobox;
+    private ComboBox<String> combobox;
 
     @FXML
-    TextField ordertotal;
+    private TextField ordertotal;
 
     @FXML
-    Button cancelorder, export;
+    private Button cancelorder, export;
 
     /**
      * Finds the index of an order with a given order number in the provided ArrayList.
