@@ -11,14 +11,17 @@ public class StoredOrders {
     private static int orderNum;
 
     public StoredOrders() {
-        orderList = new ArrayList<>();
+        orderList = new ArrayList<Order>();
         orderNum = Constants.none;
     }
+
     //never use this outside of a constructor for a normal order object
     public static int getNextOrderNum() {
         return ++orderNum;
     }
     public void addOrder(Order order) { orderList.add(order); }
+
+    public ArrayList<Order> getOrderList(){ return orderList; }
 
     public static void export() { // Change everything about this probably FileChooser
         try (ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream("Order.dat"));) {

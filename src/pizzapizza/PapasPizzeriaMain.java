@@ -10,10 +10,6 @@ import java.io.IOException;
 
 public class PapasPizzeriaMain extends Application {
 
-    public void newWindow() throws IOException{
-
-    }
-
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader =

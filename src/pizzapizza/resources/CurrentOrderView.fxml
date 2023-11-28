@@ -75,8 +75,8 @@
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" />
                </GridPane.margin></ListView>
-            <Button fx:id="rp" mnemonicParsing="false" onAction="#removePizza" prefHeight="26.0" prefWidth="233.0" text="Remove Pizza" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="po" mnemonicParsing="false" prefHeight="26.0" prefWidth="264.0" text="Place Order" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="rp" disable="true" mnemonicParsing="false" onAction="#removePizza" prefHeight="26.0" prefWidth="260.0" text="Remove Pizza" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="po" disable="true" mnemonicParsing="false" onAction="#placeOrder" prefHeight="26.0" prefWidth="258.0" text="Place Order" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Label GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="31.0" />
@@ -90,7 +90,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="orderNum" prefHeight="27.0" prefWidth="222.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+            <TextField fx:id="orderNum" editable="false" prefHeight="27.0" prefWidth="222.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                <font>
                   <Font name="Berlin Sans FB" size="15.0" />
                </font>
@@ -98,14 +98,14 @@
                   <Insets left="10.0" right="100.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="salesTax" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <TextField fx:id="salesTax" editable="false" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="5.0" right="5.0" />
+                  <Insets right="15.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="subTotal" prefHeight="25.0" prefWidth="133.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <TextField fx:id="subTotal" editable="false" prefHeight="25.0" prefWidth="133.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="5.0" right="5.0" />
+                  <Insets right="15.0" />
                </GridPane.margin>
             </TextField>
             <Label text="Sales Tax $" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
@@ -118,7 +118,7 @@
                   <Font name="Berlin Sans FB" size="28.0" />
                </font>
             </Label>
-            <TextField fx:id="totalPrice" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <TextField fx:id="totalPrice" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
